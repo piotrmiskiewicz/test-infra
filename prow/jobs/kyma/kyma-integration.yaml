@@ -393,7 +393,7 @@ periodics:
   extra_refs:
     - org: piotrmiskiewicz
       repo: test-infra
-      base_ref: fluentd-for-stability-checker
+      base_ref: stability-checker-with-fluentd
       path_alias: github.com/kyma-project/test-infra
     - org: kyma-project
       repo: kyma
