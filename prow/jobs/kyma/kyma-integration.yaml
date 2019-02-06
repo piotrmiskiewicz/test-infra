@@ -401,18 +401,22 @@ periodics:
       path_alias: github.com/kyma-project/kyma
   spec:
     volumes:
+    # <add>
           - name: sa-stability-fluentd-storage-writer
             secret:
               secretName: sa-stability-fluentd-storage-writer
+    # </add>
 
     containers:
       - image: eu.gcr.io/kyma-project/test-infra/kyma-cluster-infra:v20190129-c951cf2
         securityContext:
           privileged: true
+        # <add>
         volumeMounts:
          - name: sa-stability-fluentd-storage-writer
            mountPath: /etc/credentials/sa-stability-fluentd-storage-writer
            readOnly: true
+        # </add>
         command:
           - "bash"
         env:
