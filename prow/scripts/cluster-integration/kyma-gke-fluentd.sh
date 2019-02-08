@@ -327,6 +327,7 @@ kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-ad
 #date
 #installKyma
 
+kubectl create ns kyma-system
 shout "Install stability-checker"
 date
 installStabilityChecker
